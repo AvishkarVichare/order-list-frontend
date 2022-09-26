@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect, useState } from 'react'
+import Search from './components/Search'
+import SearchDisplay from './components/SearchDisplay'
+import CustomerState from './context/customerContext/CustomerState'
+import fetchData from './fetchData'
 
-function App() {
+const App = () => {
+   
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <CustomerState>
+
+        <>
+        <Search/>
+        <SearchDisplay />
+        </>
+
+    </CustomerState>
+  )
 }
 
-export default App;
+export default App
