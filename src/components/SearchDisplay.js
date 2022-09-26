@@ -65,7 +65,7 @@ const SearchDisplay = () => {
                 return (
                     <OrderCard key={e.orderID} orderID={e.orderID} amount={e.amount} date={e.date} />
                 )
-            }) : <h1>Search for orders</h1>}
+            }) : <h1 className='text-[3rem] font-bold text-gray-500 mt-[100px] '>Search for orders</h1>}
         </div>
     )
 }
