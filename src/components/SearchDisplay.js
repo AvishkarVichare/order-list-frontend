@@ -28,7 +28,7 @@ const SearchDisplay = () => {
 
         if (search && dateChecker == 'Invalid Date') {
             const arr = custData.filter(e => {
-                return e.firstName.includes(search.trim());
+                return e.firstName.includes((search.trim()).toLowerCase());
             })
             let orderArr = [];
             arr.forEach(e => {
